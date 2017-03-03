@@ -270,13 +270,19 @@ cal.get(Calendar.HOUR_OF_DAY);
 
 
 #### calculating the elapsed time:
-         ```
-        long startTime = System.currentTimeMillis();
-        //times flies by..
-        long finishTime =  System.currentTimeMillis();
-        long timeElapsed = startTime-finishTime;
-        System.out.println(timeElapsed);
-        ```
+ ```        
+long startTime = System.currentTimeMillis();
+//times flies by..
+long finishTime =  System.currentTimeMillis();
+long timeElapsed = startTime-finishTime;
+System.out.println(timeElapsed);
+```
+
+## regular expressions
+
+#### finding matching text using REGEX:
+
+
         
 
 
