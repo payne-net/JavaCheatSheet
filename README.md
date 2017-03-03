@@ -113,3 +113,174 @@ str1.replace(" ","");
 String str = "tim,kerry,timmy,camden";
 String[] results = str.split(",");
 ```
+
+#### making a string uppercase and lowercase:
+
+```
+String strUpper = str1.toUpperCase();
+String strUpper = str1.toUpperCase();
+```
+
+## working with data structures
+
+#### resizing an array:
+
+```     
+int[] myArray = new int[10];
+
+int[] tmp = new int[myArray.length + 10];
+System.arraycopy(myArray, 0, tmp, 0, myArray.length);
+myArray = tmp;
+
+``` 
+
+#### iterating over a collection:
+``` 
+ for (Iterator it = map.entrySet().iterator();it.hasNext();){
+
+            Map.Entry entry = (Map.Entry)it.next();
+            Object key = entry.getKey();
+            Object value = entry.getValue();
+        }
+``` 
+
+#### creating a mapped collection:
+``` 
+        HashMap map = new HashMap();
+        map.put(key1,obj1);
+        map.put(key2,obj2);
+        map.put(key2,obj2);
+``` 
+
+#### sorting an array:
+```
+       int[] nums = {1,4,7,324,0,-4};
+       Arrays.sort(nums);
+       System.out.println(Arrays.toString(nums));
+```
+
+#### sorting an arrayList:
+```
+        List<String> unsortList = new ArrayList<String>();
+
+		unsortList.add("CCC");
+		unsortList.add("111");
+		unsortList.add("AAA");
+        Collections.sort(unsortList);
+```
+#### finding an object in arrayList:
+```
+int index = arrayList.indexOf(obj);
+```
+#### finding an object by value in a hashmap:
+```
+hashmap.containsValue(obj);
+```
+#### finding an object by key in a hashmap:
+```
+hashmap.containsKey(obj);
+```
+#### binary search in an array:
+```
+int[] nums = new int[]{7,5,1,3,6,8,9,2};
+Arrays.sort(nums);
+int index = Arrays.binarySearch(nums,6);
+System.out.println("6 is at index: "+ index);
+```
+#### converting arrayList to array:
+```
+Object[] objects = arrayList.toArray();
+```
+#### converting hashmap to array:
+```
+Object[] objects = hashmap.entrySet().toArray();
+```
+
+## dates and times
+
+#### printing date and time:
+```
+Date todaysDate = new Date(); //todays date
+SimpleDateFormat formatter = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss"); //date format
+String formattedDate = formatter.format(todaysDate);
+System.out.println(formattedDate);
+```
+
+#### converting date to calendar:
+```
+Date mDate = new Date();
+Calendar mCal = Calendar.getInstance();
+mCal.setTime(mDate);
+```
+
+#### converting calendar to date:
+```
+Calendar mCal = Calendar.getInstance();
+Date mDate = mDate.getTime();
+```
+
+#### parsing Strings into dates:
+```
+public void StringtoDate(String x) throws ParseException{
+String date = "March 20, 1992 or 3:30:32pm";
+DateFormat df = DateFormat.getDateInstance();
+Date newDate = df.parse(date);
+     
+    }
+ ```
+ 
+#### date arithmetic using date objects:
+ ``` 
+Date date = new Date();
+long time = date.getTime();
+time += 5*24*60*60*1000; //may give a numeric overflow error on IntelliJ IDEA
+Date futureDate = new Date(time);
+
+System.out.println(futureDate);
+ ```
+ 
+#### date arithmetic using calendar objects:
+ ``` 
+Calendar today = Calendar.getInstance();
+today.add(Calendar.DATE,5);
+ ```
+#### difference between two dates:
+  ```
+ long diff = time1 - time2;
+ diff = diff/(1000*60*60*24);
+  ```
+#### comparing dates:
+  ```
+ boolean result = date1.equals(date2);
+  ```
+  
+#### getting details from calendar:
+  ```
+  
+Calendar cal = Calendar.getInstance();
+cal.get(Calendar.MONTH);
+cal.get(Calendar.YEAR);
+cal.get(Calendar.DAY_OF_YEAR);
+cal.get(Calendar.WEEK_OF_YEAR);
+cal.get(Calendar.DAY_OF_MONTH);
+cal.get(Calendar.DAY_OF_WEEK_IN_MONTH);
+cal.get(Calendar.DAY_OF_MONTH);
+cal.get(Calendar.HOUR_OF_DAY);
+```
+
+
+#### calculating the elapsed time:
+```
+        long startTime = System.currentTimeMillis();
+        //times flies by..
+        long finishTime =  System.currentTimeMillis();
+        long timeElapsed = startTime-finishTime;
+        System.out.println(timeElapsed);
+        ```
+        
+
+
+       
+
+
+        
