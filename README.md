@@ -474,9 +474,31 @@ double logVal = Math.log(125.5);
 
 ## input - output operations:
 
+#### reading a text from input:
+``` 
+//throw IOexception first
+
+BufferedReader inStream = new BufferedReader(new InputStreamReader(System.in));
+      String inline ="";
+      while (!(inline.equalsIgnoreCase("quit"))){
+          System.out.println("prompt> ");
+          inline=inStream.readLine();
+      }
+```       
+#### formatting output:
+``` 
+StringBuffer buffer = new StringBuffer();
+      Formatter formatter = new Formatter(buffer, Locale.US);
+      formatter.format("PI: "+Math.PI);
+        System.out.println(buffer.toString());
+``` 	
+#### formatter format calls:
+
+[![Ekran Resmi 2017-03-04 11.21.45.png](https://s24.postimg.org/6st8e3epx/Ekran_Resmi_2017_03_04_11_21_45.png)](https://postimg.org/image/qanvu1bnl/)
 
 
 
+#### opening file by name:
 
 
 
