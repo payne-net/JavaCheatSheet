@@ -470,6 +470,12 @@ double logVal = Math.log(125.5);
 
 [![Ekran Resmi 2017-03-04 10.42.52.png](https://s27.postimg.org/fuya7a83n/Ekran_Resmi_2017_03_04_10_42_52.png)](https://postimg.org/image/f5fhux7jz/)
 
+[![library-calls.png](https://s29.postimg.org/ux3o2zijb/library_calls.png)](https://postimg.org/image/ow5z5wvwz/)
+
+## input - output operations:
+
+
+
 
 
 
