@@ -281,10 +281,99 @@ System.out.println(timeElapsed);
 ## regular expressions
 
 #### finding matching text using REGEX:
+```
+String pattern = "[TJ]im";
+       Pattern regPat = Pattern.compile(pattern,Pattern.CASE_INSENSITIVE);
+       String text = "This is Jim and that's Tim";
+       Matcher matcher = regPat.matcher(text);
+       
+       if (matcher.find()){
+           
+           String matchedText = matcher.group();
+           System.out.println(matchedText);
+       }
+       ```
+#### replacing a matched text:
+```
+String pattern = "[TJ]im";
+       Pattern regPat = Pattern.compile(pattern,Pattern.CASE_INSENSITIVE);
+       String text = "This is jim and that's Tim";
+       Matcher matcher = regPat.matcher(text);
+       String text2 = matcher.replaceAll("Tom");
+       System.out.println(text2);
+       ```
+       
+#### replacing a matched text using StringBuffer:
+```
+ Pattern p = Pattern.compile("My");
+       Matcher m = p.matcher("My dad and My mom");
+       StringBuffer sb = new StringBuffer();
+       boolean found = m.find();
+
+       while(found){
+           m.appendReplacement(sb,"Our");
+           found = m.find();
+
+       }
+        m.appendTail(sb);
+        System.out.println(sb);
+```	
+#### finding all occurences of a pattern:
+```
+String pattern = "\\sa(\\w)*t(\\w)*"; //contains "at"
+      Pattern regPat = Pattern.compile(pattern);
+      String text = "words something at atte afdgdatdsf hey";
+      Matcher matcher = regPat.matcher(text);
+      while(matcher.find()){
 
 
-        
+          String matched = matcher.group();
+          System.out.println(matched);
+      }
+ ```    
+#### printing lines containing a pattern:
+```
+ String pattern = "^a";
+      Pattern regPat = Pattern.compile(pattern);
+      Matcher matcher = regPat.matcher("");
+        BufferedReader reader = new BufferedReader(new FileReader("file.txt"));
+        String line;
+        while ((line = reader.readLine())!= null){
+            matcher.reset(line);
+            if (matcher.find()){
+                System.out.println(line);
+            }
+        }
+```	
+#### matching new lines in text:
+```
+String pattern = "\\d$"; //any single digit
+     String text = "line one\n line two\n line three\n";
+     Pattern regPat = Pattern.compile(pattern, Pattern.MULTILINE);
+     Matcher matcher = regPat.matcher(text);
+     while (matcher.find()){
 
+         System.out.println(matcher.group());
+
+
+     }
+ ```    
+#### regex:
+
+* beginning of a string: ^
+* end of a string: $ 
+* 0 or 1 times: ?
+* 0 or more times:  (*) //without brackets
+* 1 or more times: +
+* alternative characters: [...]
+* alternative patterns: |
+* any character: .
+* a digit: \d
+* a non-digit: \D
+* whitespace: \s
+* non-whitespace: \S
+* word character: \w
+* non word character: \W
 
        
 
