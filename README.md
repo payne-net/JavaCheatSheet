@@ -1,4 +1,19 @@
-# JavaCheatSheet
+# Java CheatSheet
+
+1. [the basics](https://github.com/egek92/JavaCheatSheet#the-basics)
+2. [string manipulation](https://github.com/egek92/JavaCheatSheet#string-manupilation)
+3. [working with data structures](https://github.com/egek92/JavaCheatSheet#working-with-data-structures)
+4. [dates and times](https://github.com/egek92/JavaCheatSheet#dates-and-times)
+5. [regular expressions](https://github.com/egek92/JavaCheatSheet#regular-expressions)
+6. [dealing with numbers and math](https://github.com/egek92/JavaCheatSheet#dealing-with-numbers-and-math)
+7. [input - output operations](https://github.com/egek92/JavaCheatSheet#input---output-operations)
+8. [working with files and directories](https://github.com/egek92/JavaCheatSheet#working-with-files-and-directories)
+9. [network clients](https://github.com/egek92/JavaCheatSheet#network-clients)
+10. [packaging and documenting](https://github.com/egek92/JavaCheatSheet#packaging-and-documenting)
+11. [sorting algorithms](https://github.com/egek92/JavaCheatSheet#sorting-algorithms)
+
+
+
 
 ## the basics
 
@@ -53,7 +68,7 @@ I recommend [IntelliJ IDEA](https://www.jetbrains.com/idea/) it's free for [stud
 
 
 
-## string manupilation 
+## string manipulation 
 
 #### comparing strings:
 ```
