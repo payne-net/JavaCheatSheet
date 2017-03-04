@@ -292,16 +292,18 @@ String pattern = "[TJ]im";
            String matchedText = matcher.group();
            System.out.println(matchedText);
        }
-       ```
-#### replacing a matched text:
 ```
-String pattern = "[TJ]im";
+       
+#### replacing a matched text:
+
+```
+	String pattern = "[TJ]im";
        Pattern regPat = Pattern.compile(pattern,Pattern.CASE_INSENSITIVE);
        String text = "This is jim and that's Tim";
        Matcher matcher = regPat.matcher(text);
        String text2 = matcher.replaceAll("Tom");
        System.out.println(text2);
-       ```
+```
        
 #### replacing a matched text using StringBuffer:
 ```
