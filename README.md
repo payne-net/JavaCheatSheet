@@ -378,6 +378,103 @@ String pattern = "\\d$"; //any single digit
 * non word character: \W
 
        
+## dealing with numbers and math
+
+#### built-in types:
+
+![alt tag](https://s3.postimg.org/7ihyxdvar/Ekran_Resmi_2017_03_04_10_03_48.png)
+
+#### checking whether a string is valid number:
+
+``` 
+
+  String str = "dsfdfsd54353%%%";
+
+     try{
+
+         int result = Integer.parseInt(str);
+
+     }
+
+     catch (NumberFormatException e){
+         System.out.println("not valid");
+     }
+``` 
+     
+#### comparing Double:
+``` 
+Double a = 4.5;
+      Double b= 4.5;
+
+      boolean result = a.equals(b);
+
+      if (result) System.out.println("equal");
+ ```      
+#### rounding:
+``` 
+double doubleVal = 43.234234200000000234040324;
+       float floatVal = 2.98f;
+
+      long longResult = Math.round(doubleVal);
+      int intResult = Math.round(floatVal);
+
+        System.out.println(longResult + " and " + intResult); // 43 and 3
+``` 	
+#### formatting numbers:
+``` 
+double value = 2343.8798;
+        NumberFormat numberFormatter;
+        String formattedValue;
+        numberFormatter = NumberFormat.getNumberInstance();
+        formattedValue = numberFormatter.format(value);
+        System.out.format("%s%n",formattedValue); //2.343,88
+``` 	
+#### formatting currencies:
+``` 
+double currency = 234546457.99;
+       NumberFormat currencyFormatter;
+       String formattedCurrency;
+
+       currencyFormatter = NumberFormat.getCurrencyInstance();
+
+       formattedCurrency = currencyFormatter.format(currency);
+
+        System.out.format("%s%n",formattedCurrency); // $ 234.546.457,99
+``` 	
+#### binary, octal and hexadecimal conversion:
+``` 
+int val = 25;
+String binaryStr = Integer.toBinaryString(val);
+String octalStr = Integer.toOctalString(val);
+String hexStr = Integer.toHexString(val);
+``` 
+#### generating random numbers:
+``` 
+double rn = Math.random();
+        int rint = (int) (Math.random()*10); // random int between 0-10
+
+        System.out.println(rn);
+        System.out.println(rint);
+``` 	
+#### calculating trigonometric functions:
+``` 
+double cos = Math.cos(45);
+        double sin = Math.sin(45);
+        double tan = Math.tan(45);
+``` 	
+#### calculating logarithm
+``` 
+double logVal = Math.log(125.5);
+``` 
+#### Math library:
+
+[![Ekran Resmi 2017-03-04 10.42.52.png](https://s27.postimg.org/fuya7a83n/Ekran_Resmi_2017_03_04_10_42_52.png)](https://postimg.org/image/f5fhux7jz/)
+
+
+
+
+
+
 
 
         
