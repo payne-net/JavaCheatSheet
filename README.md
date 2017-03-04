@@ -1,8 +1,59 @@
 # JavaCheatSheet
 
+## the basics
+
+#### hello, world! :
+
+[![hello.png](https://s4.postimg.org/jzvh0kiwd/hello.png)](https://postimg.org/image/r33cg6obt/)
+
+#### if-else:
+
+[![nested-if-else.png](https://s28.postimg.org/44ozxhghp/nested_if_else.png)](https://postimg.org/image/7bjjh40xl/)
+
+#### loops:
+
+[![for-while.png](https://s29.postimg.org/bs5idrk2v/for_while.png)](https://postimg.org/image/88jknyhcz/)
+
+#### do-while:
+
+	do {
+            System.out.println("Count is: " + count);
+            count++;
+        } while (count < 11);
+	
+#### switch-case:
+
+[![switch.png](https://s15.postimg.org/vthdiexx7/switch.png)](https://postimg.org/image/7cz7nxx6f/)
+
+#### arrays:
+
+[![Ekran Resmi 2017-03-04 18.11.17.png](https://s3.postimg.org/dbp4l5mxv/Ekran_Resmi_2017_03_04_18_11_17.png)](https://postimg.org/image/92keizjof/)
+
+#### two-dimentional arrays:
+
+[![Ekran Resmi 2017-03-04 18.12.38.png](https://s14.postimg.org/4j6jd2269/Ekran_Resmi_2017_03_04_18_12_38.png)](https://postimg.org/image/a7cu3y6il/)
+
+#### objects:
+
+[![object.png](https://s2.postimg.org/o8ugyzmrt/object.png)](https://postimg.org/image/vc2cels79/)
+
+#### classes:
+
+[![class.png](https://s24.postimg.org/b0l9lgr4l/class.png)](https://postimg.org/image/ohi84c1g1/)
+
+#### methods:
+
+[![instance-method.png](https://s14.postimg.org/4qltgprbl/instance_method.png)](https://postimg.org/image/41314cqrx/)
+
+#### Java IDE comparison:
+
+[![Ekran Resmi 2017-03-04 11.02.18.png](https://s18.postimg.org/4pba52mgp/Ekran_Resmi_2017_03_04_11_02_18.png)](https://postimg.org/image/7w5top6wl/)
+
+I recommend [IntelliJ IDEA](https://www.jetbrains.com/idea/) it's free for [students](https://www.jetbrains.com/student/).
+
+
+
 ## string manupilation 
-
-
 
 #### comparing strings:
 ```
@@ -593,9 +644,57 @@ StringBuffer buffer = new StringBuffer();
 	
 ## network clients
 
+#### contacting a server:
+
+	String serverName = "www.egek.us";
+        Socket socket = new Socket(serverName, 80);
+        System.out.println(socket);
+	
+#### handling network errors:
+
+	try {
+            	Socket sock = new Socket(server_name, tcp_port);
+            	System.out.println("Connected to " + server_name);
+         	sock.close(  );
+
+        } catch (UnknownHostException e) {
+            System.err.println(server_name + " Unknown host");
+            return;
+        } catch (NoRouteToHostException e) {
+            System.err.println(server_name + " Unreachable" );
+            return;
+        } catch (ConnectException e) {
+            System.err.println(server_name + " connect refused");
+            return;
+        } catch (java.io.IOException e) {
+            System.err.println(server_name + ' ' + e.getMessage(  ));
+            return;
+        }
+	
+
+## packaging and documenting
+
+#### creating a package:
+
+	package com.ege.example;
+	
+#### documenting classes with JavaDoc:
+
+	javadoc -d \home\html
+		-sourcepath \home\src
+		-subpackages java.net
+		
+#### archiving classes with Jar:
+
+	jar cf project.jar *.class
+	
+#### running a program from a Jar:
+
+	java -jar something.jar
 	
 
 
+	
 
 	
 	
