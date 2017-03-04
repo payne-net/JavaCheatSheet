@@ -501,7 +501,104 @@ StringBuffer buffer = new StringBuffer();
 #### opening file by name:
 
 
+	BufferedReader br = new BufferedReader(new FileReader(textFile.txt)); //for reading
+        BufferedWriter bw = new BufferedWriter(new FileWriter(textFile.txt)); //for writing
+	
+#### reading a binary data:
 
+ 	InputStream is = new FileInputStream(fileName);
+        int offset = 0;
+        int bytesRead = is.read(bytes, ofset, bytes.length-offset);
+	
+#### seeking in a file:
+
+	 File file = new File(something.bin);
+        RandomAccessFile raf = new RandomAccessFile(file,"rw");
+        raf.seek(file.length());
+	
+#### reading a Jar/zip/rar file:
+
+	ZipFile file =new ZipFile(filename);
+        Enumeration entries = file.entries();
+        while(entries.hasMoreElements()){
+
+            ZipEntry entry = (ZipEntry) entries.nextElement();
+            if (entry.isDirectory()){
+                //do something
+            }
+            else{
+                //do something
+            }
+        }
+        file.close();
+	
+## working with files and directories
+
+#### creating a file:
+
+	File f = new File("textFile.txt");
+	boolean result = f.createNewFile();
+	
+#### renaming a file:
+ 
+ 	File f = new File("textFile.txt");
+	File newf = new File("newTextFile.txt");
+	boolean result = f.renameto(newf);
+
+#### deleting a file:
+
+	File f = new File("somefile.txt");
+	f.delete();
+
+#### changing file attributes:
+
+	File f = new File("somefile.txt");
+	f.setReadOnly(); // making the file read only
+	f.setLastModified(desired time); 
+
+#### getting the size of a file:
+ 	File f = new File("somefile.txt");
+	long length = file.length();
+	
+#### checking if a file exist or not:
+
+	File f = new File("somefile.txt");
+	boolean status = f.exists();
+	
+#### moving a file to another directory:
+
+	File f = new File("somefile.txt");
+	File dir = new File("directoryName");
+	boolean success = f.renameTo(new File(dir, file.getName()));
+	
+#### getting an absolute filename path:
+
+	File f = new File("somefile.txt");
+	File absPath = f.getAbsoluteFile();
+	
+#### determining if it's a file or a directory:
+
+	File f = new File("somefile.txt");
+        boolean isDirectory = f.isDirectory();
+        System.out.println(isDirectory); //false
+	
+#### listing a directory:
+
+	File directory = new File("users/ege");
+        String[] result = directory.list();
+	
+#### creating a directory:
+
+	boolean result = new File("users/ege").mkdir();
+	
+## network clients
+
+	
+
+
+
+	
+	
 
 
 
