@@ -693,6 +693,16 @@ StringBuffer buffer = new StringBuffer();
 	java -jar something.jar
 	
 
+## sorting algorithms
+
+* Bubble Sort
+* Linear Search
+* Binary Search
+* Selection Sort
+* Insertion Sort
+
+[Over here](https://github.com/egek92/SortAlgorithms)
+
 
 	
 
